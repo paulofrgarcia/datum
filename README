@@ -1,0 +1,1 @@
+rubber --clean crowd-density-SPL15 && pdflatex crowd-density-SPL15 && bibtex crowd-density-SPL15 && pdflatex crowd-density-SPL15 && pdflatex crowd-density-SPL15 && rubber --clean crowd-density-SPL15

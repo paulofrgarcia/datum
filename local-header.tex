@@ -1,0 +1,62 @@
+\ifCLASSOPTIONcompsoc
+  % IEEE Computer Society needs nocompress option
+  % requires cite.sty v4.0 or later (November 2003)
+  \usepackage[nocompress]{cite}
+\else
+  % normal IEEE
+  \usepackage{cite}
+\fi
+
+
+
+\usepackage{amsmath,graphicx,booktabs,amssymb}
+\usepackage{epstopdf}
+\usepackage{multirow,caption}
+\usepackage[export]{adjustbox}
+\usepackage[pagebackref=false,breaklinks=true,colorlinks,bookmarks=false]{hyperref}
+
+\usepackage{framed} 
+\usepackage[framed]{ntheorem}
+
+%\usepackage[pagebackref=true,breaklinks=true,colorlinks,bookmarks=false]{hyperref}
+%\usepackage[pagebackref=false,breaklinks=true,colorlinks,bookmarks=false]{hyperref}
+\graphicspath{{images/}{results/}}
+
+\def\Fig#1{Fig.~\ref{fig:#1}}
+\def\Eq#1{Eq.~(\ref{eq:#1})}
+\def\Tab#1{Table~\ref{tab:#1}}
+\def\Sec#1{Section~\ref{sec:#1}}
+\def\Prop#1{Proposition~\ref{prop:#1}}
+
+% A comment in a draft (shouldn't appear in the final version).
+\newcommand{\comment}[2]{\( \P\){\bf #1: }{\rm \sf #2}\(\P\)}
+% Comment this out in the draft
+%\newcommand{\comment}[2]{}
+\newcommand{\dbcomment}[1]{\comment{DB}{#1}}
+\newcommand{\awcomment}[2]{\comment{AW}{#1}}
+%---------------------------------
+
+\def\eg{\emph{e.g.}, }
+\def\Eg{\emph{E.g.}, }
+\def\etal{\emph{et al.}}
+\def\ie{\emph{i.e.}, }
+\def\noi{\noindent}
+
+%-----------------------
+% Change the way IEEE write table caption
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\@makecaption}
+  {\scshape}
+  {}
+  {}
+  {}
+\makeatletter
+\patchcmd{\@makecaption}
+  {\\}
+  {.\ }
+  {}
+  {}
+\makeatother
+%\def\tablename{Table}
+%-------------------------
